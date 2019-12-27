@@ -1,0 +1,77 @@
+<%= form_with(model: tamu, local: true) do |form| %>
+  <% if tamu.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tamu.errors.count, "error") %> prohibited this tamu from being saved:</h2>
+
+      <ul>
+        <% tamu.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :published_at %>
+    <%= form.datetime_select :published_at %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tglaktifitas %>
+    <%= form.date_select :tglaktifitas %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kodebooking %>
+    <%= form.text_field :kodebooking %>
+  </div>
+
+  <div class="field">
+    <%= form.label :namatamu %>
+    <%= form.text_field :namatamu %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qty %>
+    <%= form.number_field :qty %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hotel %>
+    <%= form.text_area :hotel %>
+  </div>
+
+  <div class="field">
+    <%= form.label :negara %>
+    <%= form.text_field :negara %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telp %>
+    <%= form.number_field :telp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.number_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :driver %>
+    <%= form.text_field :driver %>
+  </div>
+
+  <div class="field">
+    <%= form.label :note %>
+    <%= form.text_area :note %>
+  </div>
+
+  <div class="field">
+    <%= form.label :paket_id %>
+    <%= form.text_field :paket_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

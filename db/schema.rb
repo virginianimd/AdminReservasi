@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_26_125012) do
+ActiveRecord::Schema.define(version: 2019_12_27_013357) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -38,4 +38,47 @@ ActiveRecord::Schema.define(version: 2019_12_26_125012) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+  create_table "pakets", force: :cascade do |t|
+    t.string "jenispaket"
+    t.string "namapaket"
+    t.text "desk"
+    t.text "include"
+    t.text "exclude"
+    t.integer "harga"
+    t.integer "supplier_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["supplier_id"], name: "index_pakets_on_supplier_id"
+  end
+
+  create_table "suppliers", force: :cascade do |t|
+    t.string "namasup"
+    t.text "alamat"
+    t.string "email"
+    t.integer "telp"
+    t.text "termin"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "tamus", force: :cascade do |t|
+    t.datetime "published_at"
+    t.date "tglaktifitas"
+    t.string "kodebooking"
+    t.string "namatamu"
+    t.integer "qty"
+    t.text "hotel"
+    t.string "negara"
+    t.integer "telp"
+    t.integer "email"
+    t.string "driver"
+    t.text "note"
+    t.integer "paket_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["paket_id"], name: "index_tamus_on_paket_id"
+  end
+
+  add_foreign_key "pakets", "suppliers"
+  add_foreign_key "tamus", "pakets"
 end

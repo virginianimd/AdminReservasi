@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  jenispaket: MyString
+  namapaket: MyString
+  desk: MyText
+  include: MyText
+  exclude: MyText
+  harga: 
+  supplier: one
+
+two:
+  jenispaket: MyString
+  namapaket: MyString
+  desk: MyText
+  include: MyText
+  exclude: MyText
+  harga: 
+  supplier: two

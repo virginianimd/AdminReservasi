@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Jenispaket:</strong>
+  <%= @paket.jenispaket %>
+</p>
+
+<p>
+  <strong>Namapaket:</strong>
+  <%= @paket.namapaket %>
+</p>
+
+<p>
+  <strong>Desk:</strong>
+  <%= @paket.desk %>
+</p>
+
+<p>
+  <strong>Include:</strong>
+  <%= @paket.include %>
+</p>
+
+<p>
+  <strong>Exclude:</strong>
+  <%= @paket.exclude %>
+</p>
+
+<p>
+  <strong>Harga:</strong>
+  <%= @paket.harga %>
+</p>
+
+<p>
+  <strong>Supplier:</strong>
+  <%= @paket.supplier_id %>
+</p>
+
+<%= link_to 'Edit', edit_paket_path(@paket) %> |
+<%= link_to 'Back', pakets_path %>

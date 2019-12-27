@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pakets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Jenispaket</th>
+      <th>Namapaket</th>
+      <th>Desk</th>
+      <th>Include</th>
+      <th>Exclude</th>
+      <th>Harga</th>
+      <th>Supplier</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pakets.each do |paket| %>
+      <tr>
+        <td><%= paket.jenispaket %></td>
+        <td><%= paket.namapaket %></td>
+        <td><%= paket.desk %></td>
+        <td><%= paket.include %></td>
+        <td><%= paket.exclude %></td>
+        <td><%= paket.harga %></td>
+        <td><%= paket.supplier_id %></td>
+        <td><%= link_to 'Show', paket %></td>
+        <td><%= link_to 'Edit', edit_paket_path(paket) %></td>
+        <td><%= link_to 'Destroy', paket, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Paket', new_paket_path %>

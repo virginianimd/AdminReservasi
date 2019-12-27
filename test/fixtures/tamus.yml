@@ -1,0 +1,29 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  published_at: 2019-12-27 09:33:58
+  tglaktifitas: 2019-12-27
+  kodebooking: MyString
+  namatamu: MyString
+  qty: 1
+  hotel: MyText
+  negara: MyString
+  telp: 1
+  email: 1
+  driver: MyString
+  note: MyText
+  paket: one
+
+two:
+  published_at: 2019-12-27 09:33:58
+  tglaktifitas: 2019-12-27
+  kodebooking: MyString
+  namatamu: MyString
+  qty: 1
+  hotel: MyText
+  negara: MyString
+  telp: 1
+  email: 1
+  driver: MyString
+  note: MyText
+  paket: two

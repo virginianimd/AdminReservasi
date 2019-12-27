@@ -1,0 +1,52 @@
+<%= form_with(model: paket, local: true) do |form| %>
+  <% if paket.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(paket.errors.count, "error") %> prohibited this paket from being saved:</h2>
+
+      <ul>
+        <% paket.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :jenispaket %>
+    <%= form.text_field :jenispaket %>
+  </div>
+
+  <div class="field">
+    <%= form.label :namapaket %>
+    <%= form.text_field :namapaket %>
+  </div>
+
+  <div class="field">
+    <%= form.label :desk %>
+    <%= form.text_area :desk %>
+  </div>
+
+  <div class="field">
+    <%= form.label :include %>
+    <%= form.text_area :include %>
+  </div>
+
+  <div class="field">
+    <%= form.label :exclude %>
+    <%= form.text_area :exclude %>
+  </div>
+
+  <div class="field">
+    <%= form.label :harga %>
+    <%= form.text_field :harga %>
+  </div>
+
+  <div class="field">
+    <%= form.label :supplier_id %>
+    <%= form.text_field :supplier_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

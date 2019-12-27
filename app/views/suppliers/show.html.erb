@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Namasup:</strong>
+  <%= @supplier.namasup %>
+</p>
+
+<p>
+  <strong>Alamat:</strong>
+  <%= @supplier.alamat %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @supplier.email %>
+</p>
+
+<p>
+  <strong>Telp:</strong>
+  <%= @supplier.telp %>
+</p>
+
+<p>
+  <strong>Termin:</strong>
+  <%= @supplier.termin %>
+</p>
+
+<%= link_to 'Edit', edit_supplier_path(@supplier) %> |
+<%= link_to 'Back', suppliers_path %>
